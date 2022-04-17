@@ -1,0 +1,124 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+.login {
+   position: relative;
+   width: 100%;
+   height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-image: linear-gradient(94.3deg,rgba(26,33,64,1)  10.9%,rgba(81,84,115,1) 87.1%);
+   overflow: hidden;
+}
+
+.login::before {
+   position: absolute;
+   content: "";
+   z-index: 2;
+   width: 450px;
+   height: 450px;
+   top: 50%;
+   left: 50%;
+   transform: translate(-100%,-80%);
+   background-color: #ffe53b;
+   background-image: linear-gradient(147deg,#ffe53b  0%,#ff2525  74%);
+   border-radius: 50%;
+   box-shadow: 0  0  0  0  rgba(255,255,255,0.2);
+   animation: pulse  1.6s  infinite;
+   transition: all 0.4s;
+}
+
+.login::after {
+   position: absolute;
+   content: "";
+   z-index: 2;
+   width: 300px;
+   height: 300px;
+   top: 50%;
+   left: 50%;
+   transform: translate(10%,20%);
+   background-color: #fa8bff;
+   background-image: linear-gradient(45deg,#fa8bff  0%,#2bd2ff  52%,#2bff88  90%);
+   border-radius: 50%;
+   box-shadow: 0  0  0  0  rgba(255,255,255,0.2);
+   animation: pulse  1.8s  infinite;
+   transition: all  0.4s;
+}
+
+@keyframes pulse {
+   50% {
+       box-shadow: 0  0  0  50px  rgba(255,255,255,0);
+   }
+   100% {
+       box-shadow: 0  0  0  0   rgba(255,255,255,0);
+   }
+}
+
+.login_form {
+   position: relative;
+   z-index: 3;
+   width: 320px;
+   background-color: rgba(255,255,255,0.1);
+   padding: 8px  30px;
+   border-radius: 8px;
+   box-shadow: 0  20px  40px  rgba(0,0,0,0.1);
+   border: 1px  solid  rgba(255,255,255,0.2);
+   border-right:1px  solid   rgba(255,255,255,0.1);
+   border-bottom: 1px  solid  rgba(255,255,255,0.1);
+   backdrop-filter: blur(20px);
+}
+
+.login_form_text {
+   color: #fff;
+    display: block;
+    text-align: center;
+    margin: 0  0  10px  0;
+    font-weight: 900;
+}
+
+.login_back {
+   cursor: pointer;
+}
+
+
+.login_input {
+   width: 100%;
+   height: 50px;
+   border-radius: 8px;
+   background-color: transparent;
+   border: 1px  solid  rgba(255,255,255,0.5);
+   margin-bottom: 5px;
+   padding-left: 15px;
+   color: #fff;
+   outline: none;
+   background: none;
+}
+
+.login_input::placeholder {
+   color: #fff;
+   outline: none;
+}
+
+.login-form-button {
+   width: 100%;
+   height: 50px;
+   border: 0;
+   background-image: linear-gradient(to right,#02aab0  0%,#00cdac   51%,#02aab0   100%);
+   background-size: 200%  auto;
+   border-radius: 8px;
+   color: #fff;
+   outline: none;
+   cursor: pointer;
+   box-shadow: 0  20px  40px  rgba(0,0,0,0.1);
+   transition: ease  0.4s;
+}
+
+.login-form-button:hover {
+   background-position: right  center;
+   color: #fff;
+   text-decoration: none;
+}
